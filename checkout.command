@@ -15,7 +15,10 @@ git log -4 $submit
 echo "请输入要合并的 commit id"
 read submit
 git cherry-pick $submit
+git add .
+git commit -m "merge"
 git push
+echo "请到代码仓库提交 pull request"
 else
 echo "分支名称不能为空"
 fi
